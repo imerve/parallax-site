@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo" >Logo</a>
+        <ul>
+            <li><a href="#" >Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+
+
+        </ul>
+
+    </header>
+    <section>
+        <!-- <nav>
+           <h4> Developedbyed</h4>
+           <a sclass="button">Sign Up</a>
+        </nav> -->
+
+
+  
+        
+
+            <img src="img/stars2.png" id="stars" width="1080px" >
+            <img src="img/moon.png" id="moon" width="100%" >
+            <img src="img/27085.png" id="forest" width="100%" > 
+       
+            <h2 id="text"> <span>Tasarımları </span><br> Keşfetme Zamanı </h2>
+        
+    </section>
+
+    
+
+    <div class="sec">
+        <div id="parallax-header"><h2>Parallax Scrolling Effect</h2></div>
+        
+        <div class="box"> 
+            
+        <img src="img/waves.png" id="waves" > 
+        <h2> Sakura</h2>
+        
+        </div>    
+        <div class="box"> <img src="img/origami.png" id="origami" > </div>   
+        <div class="box"> <img src="img/stars.png" id="stars2" > </div>    
+        
+        <div>
+       
+        
+            <p class="textt" id="textt">Parallax also affects optical instruments such as rifle scopes, binoculars, microscopes, and twin-lens reflex cameras that view objects from slightly different angles. Many animals, along with humans, have two eyes with overlapping visual fields that use parallax to gain depth perception; this process is known as stereopsis. In computer vision the effect is used for computer stereo vision, and there is a device called a parallax rangefinder that uses it to find range, and in some variations also altitude to a target. 
+      
+        </div>
+    
+    </div> 
+
+
+
+
+<script>
+let text=   document.getElementById('text');
+let stars=   document.getElementById('stars');
+let forest=   document.getElementById('forest');
+let moon=   document.getElementById('moon');
+let header=   document.getElementById('header');
+
+window.addEventListener('scroll',function(){
+    let value = window.scrollY;
+
+    text.style.top = 50+ value*-0.4+ 'px';
+    stars.style.top =  value*-0.4+ 'px';
+    moon.style.top =  value*-0.4+ 'px';
+    header.style.top =  value*-0.4+ 'px';
+})
+
+</script>  
+
+
+
+
+<script>  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"</script>
+<script>  src ="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" </script> 
+<script>  src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"</script>
+<script>  src="./script.js"</script> 
+
+<!-- <script>
+
+    let controller= newScrollingMagic.Controller();
+    let timeline= new TimelineMax();
+
+    timeline
+    .to(".textt",2,{x:500})
+    .to(".sec",2, {opacity:0},'-=2');
+
+    let sec = new ScrollMagic.Sec({
+
+        triggerElement:"sec",
+        duration: "100%",
+        triggerHook: 0,
+    
+
+    }); -->
+    
+</script>
+</body>
+</html>
