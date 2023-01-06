@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+</head>
+
+
+<body>
+    <div class="extcontainer">
+        <div class="maincontainer" id="maincontainer">
+
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <input type="button" id="logginbutton" onclick="uyari()" value="Submit">
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+        sifre_liste = [
+            {
+                "email": "isra@isra.com",
+                "password": "ömer"
+            },
+            {
+                "email": "ömer@ömer.com",
+                "password": "isra"
+            }
+
+        ]
+
+
+
+
+
+
+        function uyari() {
+            var getmail = document.getElementById("email").value;
+            var getpasword = document.getElementById("password").value;
+            var alınan_dict = {
+                "email": getmail,
+                "password": getpasword
+            };
+
+
+            // if (sifre_liste.some(
+
+            //     (eleman) => {
+            //         return eleman.email == alınan_dict.email && eleman.password == alınan_dict.password;
+            //     }
+
+            // )) {
+            //     alert("şifte doğru")
+            // } else { alert("şifte yanlış") };
+
+            if (JSON.stringify(sifre_liste).includes(
+                JSON.stringify(alınan_dict)
+            )) {
+                alert("şifte doğru")
+            } else { alert("şifte yanlış") };
+
+
+
+
+        }
+
+    </script>
+</body>
+
+
+</html>
